@@ -1,0 +1,8 @@
+.navbar-header{width: 40%;}
+.navbar-header h1{font-weight: 400;margin: 10px 0 0 0;}
+.navbar-brand{padding:0px !important;width:100px}
+.nav{float: right;padding-right: 50px}
+footer{background-color: #222222;color: #fff;width: 100%;position:fixed;bottom:0px}
+.navbar-header img,.item img{width:100%;height: 100% !important;}
+.row{margin-top:30px;color:#ecf0f1 !important}
+center{margin-top:60px}

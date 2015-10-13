@@ -1,0 +1,24 @@
+@font-face{
+font-family:'Lato';
+font-style:normal;
+src:url(../fonts/lato.woff);
+}
+.navbar-header{width: 40%;}
+.navbar-header h1{font-weight: 400;margin: 10px 0 0 0;}
+.navbar-brand{padding:0px !important;width:100px}
+html, body,section{height: 100%;text-align:center;overflow-x:hidden;text-transform:uppercase;font-family:'Lato' !important; }
+.navbar-header img,.item img{width:100%;height: 100% !important;}
+/*.nav{float: right;padding-right: 50px}*/
+section .container-fluid{padding: 0px !important;margin-top:40px;height:100%;}
+.row{height:350px;}
+ul {list-style:none;padding:0px !important}
+ul li{display:inline-block; padding: 0 2%;}
+ figure img{height:250px;width:250px;border-radius:50%}
+footer{background-color: #eee;color: #222;width: 100%}
+.one{color:#2c3e50;margin:4% 0px 0 0}
+.two{background-color:#DADFE1;color:#222}
+.three{background-color:#222;color:#eee}
+figcaption{font-size:1.5em}
+footer h2{margin:0}
+.col-sm-4 img{height:250px;width:250px;border-radius:50%}
+.one p{font-size:1.2em;text-align:justify;word-wrap:break-word;}

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>map</title>
+  <style>
+  html, body, #map-canvas {
+    height: 100%;
+    margin: 0px;
+    padding: 0px
+  }
+  #directionsPanel{
+    position: absolute;
+    z-index: 9999;
+    background: #fff;
+    border: 1px solid #eee;
+    color: #222;
+    top:1%;
+    right:1%;
+    width: 50%;
+    /*height:50%;*/
+    opacity: 0.9;
+    border-radius: 4px;
+    padding:2px;
+  }
+  .hide{
+    display: none;
+  }
+  </style>
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places,geometry,"></script>
+  </head>
+  <body onload="getLocation()">
+    <center>
+    <div id="info"><h1>Please share your location</h1></div>
+  </center>
+  <div id="map-canvas"></div>
+  <div id="directionsPanel" class="hide">
+  </div>  
+  <script>
+var rendererOptions = {
+  draggable: true
+};
+  var directionsService = new google.maps.DirectionsService();
+  var directionsDisplay = new google.maps.DirectionsRenderer();
+  var z=0,final_dist=0,final_dist,temp,lat,lng,r=1600;
+  var x=document.getElementById('info');
+  function getLocation() {
+      if (navigator.geolocation) {
+          navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+          x.innerHTML = "Geolocation is not supported by this browser.";}
+      }
+      
+  function showPosition(position) {
+      lat=position.coords.latitude; 
+      lng=position.coords.longitude;  
+      initialize();
+  }
+  function initialize() {
+    x.innerHTML ="";
+    var pyrmont = new google.maps.LatLng(lat,lng); 
+
+    var map = new google.maps.Map(document.getElementById('map-canvas'), {
+      center: pyrmont,
+      zoom: 15
+    });
+
+      var la=["37.469264","37.447054","37.296105","37.496384","37.791541"];
+      var lt=["-122.201517","-122.159287","-121.877791","-122.244752","-122.435603"];
+      var origin = new google.maps.LatLng(lat,lng);
+      for (var i = 0; i < la.length; i++) {
+      var locationDestino = new google.maps.LatLng(la[i],lt[i]);
+    calcRoute(origin,locationDestino); 
+      }
+    final_dist=localStorage.getItem("distance"); 
+    final_dest=localStorage.getItem("destination"); 
+    console.log(final_dist+" "+final_dest);
+        initialize_final(origin,final_dest);
+  }
+
+function calcRoute(origin,locationDestino) {
+  var request = {
+    origin: origin,
+    destination: locationDestino,
+    travelMode: google.maps.DirectionsTravelMode.DRIVING
+  };
+  directionsService.route(request, function(response, status) {
+    if (status == google.maps.DirectionsStatus.OK) {
+    temp=response.routes[0].legs[0].duration["value"];
+    console.log(temp);
+    if (z==0){
+      final_dist=temp;
+      localStorage.setItem("distance", final_dist);
+      localStorage.setItem("destination", locationDestino);
+    }
+    else if(z>0 && final_dist>temp){
+      final_dist=temp;
+      localStorage.setItem("distance", final_dist);
+      localStorage.setItem("destination", locationDestino);   
+    }
+  }
+      z++;
+  });
+  }
+
+  function initialize_final(origin,final_dest) {
+    directionsDisplay = new google.maps.DirectionsRenderer();
+    var mapOptions = {
+      zoom: 14,
+      center: origin
+    }
+    map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+      var trafficLayer = new google.maps.TrafficLayer();
+    trafficLayer.setMap(map);
+
+  directionsDisplay.setMap(map);
+  directionsDisplay.setPanel(document.getElementById("directionsPanel"));
+  calcRoute_final(origin,final_dest);
+  }
+
+  function calcRoute_final(origin,final_dest) {
+        document.getElementById('directionsPanel').classList.remove('hide');
+    var request = {
+        origin: origin,
+        destination: final_dest,
+        travelMode: google.maps.TravelMode.DRIVING
+    };
+    directionsService.route(request, function(response, status) {
+      if (status == google.maps.DirectionsStatus.OK) {
+        directionsDisplay.setDirections(response);
+      }
+    });
+  }
+
+  </script>
+
+  </body>
+</html>

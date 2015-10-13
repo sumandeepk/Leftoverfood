@@ -1,0 +1,55 @@
+.one
+{
+background-color: #F53127;
+height:100px;
+text-align:center;
+
+}
+.outer
+{
+border-style:solid ;
+border-width:1px;
+margin-left:100px;
+margin-right:100px;
+border-color:gray;
+}
+.two
+{
+margin-left:100px;
+}
+.two h1
+{
+color:#F53127;
+}
+
+.three
+{
+margin-left:100px;
+margin-bottom:50px;
+}
+.three .textbox
+{
+height:25px;
+width:275px;
+background: transparent url(http://html-generator.weebly.com/files/theme/input-text-8.png) repeat-x; 
+    border: 1px solid #999; 
+    outline:0; 
+    
+}
+
+.three .btn
+{
+
+  padding:5px;
+  background: transparent url(http://html-generator.weebly.com/files/theme/input-text-8.png) repeat-x;
+  border: 1px solid #666;
+  color:black;
+  text-decoration:none;
+  width:275px;
+}
+.three .btn:hover
+{
+background-color:#ED432D;
+
+}
+

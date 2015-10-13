@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/stylesheets/review.css">
+</head>
+<body>
+<form method="post">
+<div class="ext">
+<div class="outer">
+ 
+  <div class="inner1">
+    <ul>
+     <button class="btn1" type="submit" formaction="/home">Home&nbsp;&nbsp;</button>
+      <button class="btn1" type="submit" formaction="/aboutme">About Me&nbsp;&nbsp;</button>
+     <button class="btn1" type="submit" formaction="/review">Write a Review&nbsp;&nbsp;</button>
+     
+    </ul>
+  </div>
+  
+  <div class="inner2">
+   <ul>
+    
+    <button class="btn2" type="submit" formaction="/login">Log Out</button><br>
+      <button class="btn2" type="submit" formaction="/login">Log In</button>
+   </ul>
+  </div>
+ 
+</div>
+<div class="outer3">
+<h1>Yelp is the best way to find great local businesses</h1>
+<p>People use Yelp to search for everything from the city's tastiest burger to the most renowned cardiologist. What will you uncover in your neighborhood?</p>
+
+</div>
+<div class="outer1">
+<h1> Best of Yelp: San Jose</h1>
+</div>
+
+<div class="text">
+<p>Your Review:</p>
+<p>Category:<select name="Category">
+
+ <% for(var i=0;i<data.length;i++)
+   {%>
+           <option><%=data[i]%></option>
+           
+     
+   <%}%>
+   
+
+</select>
+&nbsp;Name:<input type="text" name="Name"></input>
+&nbsp;Rating(out of 5):<input type="text" name="Rating"></input>
+</p>
+<textarea rows="10" cols="100" placeholder="Type your text here" name="Review"></textarea>
+<button type="submit" formaction="/saveReview">Save</button>
+</div>
+
+
+
+</div>
+</form>
+</body>
+</html>

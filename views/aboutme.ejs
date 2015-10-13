@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="/stylesheets/aboutme.css">
+</head>
+<body>
+<form method="post">
+<div class="ext">
+<div class="outer">
+ 
+  <div class="inner1">
+    <ul>
+     <button class="btn1" type="submit" formaction="/home" >Home&nbsp;&nbsp;</button>
+      <button class="btn1 type="submit" formaction="/aboutme">profile&nbsp;&nbsp;</button>
+     <button class="btn1" type="submit" formaction="/connection">connections&nbsp;&nbsp;</button>
+     
+    </ul>
+  </div>
+  
+  <div class="inner2">
+   <ul>
+    
+    <button class="btn2" type="submit" formaction="/login">Log out</button><br>
+      <button class="btn2" type="submit" formaction="/login">Log In</button>
+   </ul>
+  </div>
+ 
+</div>
+<div class="outer3">
+<h1>connect to coworkers</h1>
+<p>"learn about how they are doing"</p>
+
+<div class="outer2"
+
+
+  
+   <h1>personal details</h1>
+   <% for(var i=0;i<data1.length;i++)
+   {%>
+   		<p>tweet number : <%=i%> </p>
+        <p>name :<%=data1[i]%> </p>
+        <p>screen name:<%=data2[i]%> </p>
+        <p>tweet text:<%=data3[i]%> </p>
+		<p>id:<%=data4[i]%> </p>    
+		<p>location:<%=data5[i]%> </p>    
+		
+       
+        
+        <button class="btn3" type="submit" formaction="/review"  >Edit profile&nbsp;&nbsp;</button>  
+     
+   <%}%> 
+</div>
+</div>
+
+</form>
+</body>
+</html>

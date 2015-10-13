@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>LeftOverFood</title>
+  <meta charset="utf-8">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">  </script>
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+
+  <![endif]-->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/index.css">          
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+  </head>
+  <body>
+    <header>
+    <script src="http://code.highcharts.com/highcharts.js"></script>
+
+    
+     
+    </header>
+    <section>
+      <div class="container-fluid">
+      
+       <div id="container" style="height: 400px"></div>
+       </div>      
+    </section>    
+    <footer class="text-center">
+    <h2> <%=res2%>
+      &copy; 2015 Left Over Food. All rights reserved.
+    </footer>
+  </body>
+  <script>
+   
+  x = null;
+
+$(function () {
+    $('#container').highcharts({
+        chart: {
+           
+        },
+        xAxis: {
+            categories: [<%=res3%>]
+        },
+        
+        series: [{
+            name: 'may',
+            data: [<%=res2%>]        
+        }],
+        title: {
+    text: 'Donor Data'
+}
+    });
+    
+    
+    function FoodCats()
+    {
+        if (Highcharts.charts[0].xAxis[0].categories[0] == 'Jan'){
+            Highcharts.charts[0].xAxis[0].update({categories:['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12']}, true);
+        }else{
+           Highcharts.charts[0].xAxis[0].update({categories:['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec']}, true);
+        }
+        setTimeout(FoodCats,1000);        
+        
+    }
+});
+  </script>
+  
+</html>
+
+
+
+
+
+
+

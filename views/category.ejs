@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Left Over food</title>
+  <meta charset="utf-8">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+  </script>
+  <![endif]-->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/category.css">          
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+              <img alt="Brand" src="images/logo.png">
+            </a>
+            <h1>LeftOverfood</h1>            
+          </div>         
+            <ul class="nav nav-pills text-center">
+              <li><a href="/">Home</a></li>
+              <li class="active"><a href="/donor">Donor</a></li>              
+              <li><a href="/volunteer">Volunteer</a></li>
+              <li><a href="/login">Login</a></li>               
+              <li><a href="/feedback">FeedBack</a></li>                            
+            </ul>
+        </div> 
+      </nav>
+    </header>
+        <section>
+      <div class="container-fluid">
+      <div class="row">
+      <div class="col-sm-offset-1 col-sm-4">
+            <h2>How our App Works</h2>
+      	<h3>1. Request a food pick-up when your business or organization has leftovers.</h3>
+      	<h3>2. Share your good deed on your social networks.</h3> 
+      	<h3>3 Delivery is taken care of by our on-demand drivers. We’ll let you know when they are on their way!</h3>       	     	
+      </div>
+      <div class="col-sm-offset-1 col-sm-5">
+      <h2>Donor details</h2>
+<form method="post" role="form" action="/saveCategory" class="form-horizontal">
+  <div class="form-group">
+    <label for="fname" class="control-label">First name:</label>
+    <input class="form-control" type="text" placeholder="First name" name="fname" id="fname" required/>
+  </div>
+  <div class="form-group">
+    <label for="lname" class="control-label">Last name:</label>
+    <input class="form-control" type="text" name="lname" id="lname" placeholder="Last name" required/>
+  </div>
+  <div class="form-group">
+    <label for="email" class="control-label">Email:</label>
+    <input class="form-control" type="email" name="email" id="email" placeholder="Email" required/>
+  </div>
+  <div class="form-group">
+    <label for="contactno" class="control-label">Mobile:</label>
+    <input class="form-control" type="text" name="contactno" id="contactno" placeholder="Mobile number" pattern="[0-9]{10}" required />
+  </div>
+  <div class="form-group">
+    <label for="adress" class="control-label">Address:</label>
+    <input class="form-control" type="text" name="adress" id="adress" placeholder="Address" required/>
+  </div>  
+  <div class="form-group">
+    <label for="tusrname" class="control-label">Twitter User Name:</label>
+    <input class="form-control" type="text" name="adress" id="tusrname" placeholder="Twitter User Name" required/>
+  </div> 
+<div class="col-sm-1">
+</div>
+<center>
+<button class="btn btn-lg btn-info" type="submit">Submit</button>
+</center>
+</form>
+
+</div>
+</div>
+</div>
+</section>
+</body>
+</html>

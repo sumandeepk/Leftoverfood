@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>LeftOverFood</title>
+  <meta charset="utf-8">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+  </script>
+  <![endif]-->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/category.css">          
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+              <img alt="Brand" src="images/logo.png">
+            </a>
+            <h1>LeftOverFood</h1>            
+          </div>         
+            <ul class="nav nav-pills text-center">
+                 <li><a href="/">Home</a></li>
+              <li><a href="/aboutus">About Us</a><li> 
+              <li><a href="/donor">Donate</a></li>              
+              <li><a href="/volunteer">Volunteer</a></li>
+              <li><a href="/login">Login</a></li>  
+              <li  class="active"><a href="/reward">Reward</a><li>
+              <li><a href="/faq">FAQ</a><li>               
+              <li><a href="/feedback">FeedBack</a></li>                             
+            </ul>
+        </div> 
+      </nav>
+    </header>
+        <section>
+      <div class="container-fluid">
+      <div class="row">
+      <div class="col-sm-offset-3 col-sm-6 col-sm-offset-3">
+      <h2>Donor details</h2>
+<form method="get" role="form" action="/checkApplicable" class="form-horizontal">
+  <div class="form-group">
+    <label for="Twitter User Name" class="control-label">Twitter User name:</label>
+    <input class="form-control" type="text" placeholder="Twitter User Name" name="userName" id="userName" required/>
+  </div>
+  
+<center>
+<button class="btn btn-lg btn-info" type="submit">Submit</button>
+</center>
+</form>
+</div>
+</div>
+</div>
+</section>
+</body>
+</html>

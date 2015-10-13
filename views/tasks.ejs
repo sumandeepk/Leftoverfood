@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>LeftOverFood</title>
+  <meta charset="utf-8">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+  </script>
+  <![endif]-->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/tasks.css">          
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script> 
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+              <img alt="Brand" src="images/logo.png">
+            </a>
+            <h1>LeftOverFood</h1>            
+          </div>         
+            <ul class="nav nav-pills text-center">
+                <li class="active"><a href="/">Home</a></li>
+              <li><a href="/aboutus">About Us</a><li> 
+              <li><a href="/dashboard">Dashboard</a></li>              
+              <li><a href="/volunteer">Volunteer</a></li>
+              <li><a href="/login">Login</a></li>  
+              <li><a href="/reward">Reward</a><li>
+              <li><a href="/faq">FAQ</a><li>               
+              <li><a href="/feedback">FeedBack</a></li>                             
+            </ul>
+        </div> 
+      </nav>
+    </header>
+    <section>
+      <div class="container-fluid">
+      	<div class="row">
+      	<div class="col-sm-12">
+      	<h1>sample</h1>
+      	<form method="get">
+      	<table class="table">
+      <thead>
+        <tr>
+          
+          
+          <th>Name</th>
+          <th>Screen name</th>
+          <th>tweet</th> 
+          <th>tweet ID</th>
+          <th>location</th>
+          <th>contact No</th>          
+        </tr>
+      </thead>
+      <tbody>
+        
+   <% for(var i=0;i<data1.length;i++)          
+   {%><tr>
+   
+        <td><%=data1[i]%> </td>
+        <td><%=data2[i]%> </td>
+        <td><%=data3[i]%> </td>
+		<td><%=data4[i]%> </td>    
+		<td><%=data5[i]%> </td>   
+		<td><%=data6[i]%> </td>  
+		     
+        
+        <td><button class="btn btn-info" value="<%=data4[i]%>" name="button" type="submit" formaction="/taskTaken">Take Task &nbsp;&nbsp;</button> </td> 
+     
+
+   
+   		 </tr>
+   <%}%> 
+      </tbody>
+    </table>
+    </form>
+      	</div>
+      	</div>
+      </div>            
+    </section>    
+    <footer class="text-center">
+    <h2>
+      &copy; 2015 LeftOverFood. All rights reserved.
+    </footer>
+  </body>
+</html>

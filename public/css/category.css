@@ -1,0 +1,23 @@
+@font-face{
+font-family:'Lato';
+font-style:normal;
+src:url(../fonts/lato.woff);
+}
+
+.navbar-header{width: 40%;}
+.navbar-header h1{font-weight: 400;margin: 10px 0 0 0;}
+.navbar-brand{padding:0px !important;width:100px}
+.navbar-header img,.item img{width:100%;height: 100% !important;}
+.nav{float: right;padding-right: 50px}
+//body{background: linear-gradient(230deg, #A24BCF, #4B79CF, #4BC5CF) repeat scroll 0% 0% / 300% 300% transparent !important;}
+section{color:#cbd0d3 !important}
+h3{
+	padding: 1%;
+color: rgb(255, 255, 255);
+border-radius: 4px;
+box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.5);
+margin:10% 0;
+}
+h3:nth-of-type(1){background-color:#67C0CE}
+h3:nth-of-type(2){background-color:#0E8D86}
+h3:nth-of-type(3){background-color:#8EC742}

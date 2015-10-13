@@ -1,0 +1,18 @@
+.navbar-header{width: 40%;}
+.navbar-header h1{font-weight: 400;margin: 10px 0 0 0;}
+.navbar-brand{padding:0px !important;width:100px}
+html, body,section{height: 100%;overflow-x:hidden }
+.navbar-header img,.item img{width:100%;height: 100% !important;}
+.nav{float: right;padding-right: 50px}
+footer{background-color: #222222;color: #fff;width: 100%}
+section .container-fluid{height: 100%;padding: 0px !important}
+#myCarousel{height: 100%}
+.carousel-inner{height: 100%;}
+.item{height: 100%;}
+.item img{opacity: 0.9}
+button a{color: #fff;}
+.carousel-caption{background-color: #222;opacity: 0.5;bottom: 30% !important;padding: 0 0 20px 0;}
+.carousel-caption a{opacity: 1}
+section .set-height{height: 50% !important;}
+.row, .row .col-sm-4{background-color: #16a085;color: #f5f5f5;height: 100% !important}
+.row .col-sm-4 img{height: 100% !important;width: 100%;border-radius: 4%}

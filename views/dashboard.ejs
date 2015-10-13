@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <title>Left Over Swap</title>
+  <meta charset="utf-8">
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js">
+  </script>
+  <![endif]-->
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/dashboard.css">   
+  <script src="http://code.highcharts.com/highcharts.js"></script>
+  <script src="http://code.highcharts.com/modules/exporting.js"></script>       
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script> 
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="/">
+              <img alt="Brand" src="images/logo.png">
+            </a>
+            <h1>Left Over Swap</h1>            
+          </div>         
+            <ul class="nav nav-pills text-center">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/volunteer">Volunteer</a></li>
+              <li><a href="/aboutus">About Us</a><li> 
+              
+              <li><a href="/login">Login</a></li>               
+              <li><a href="/reward">Rewards</a></li>                          
+              <li><a href="/faq">FAQ</a><li>               
+              <li><a href="/feedback">FeedBack</a></li>                             
+          
+            </ul>
+        </div> 
+      </nav>
+    </header>
+    <section>
+      <div class="container-fluid">
+      	<div style="color:#0000FF",class="row">
+      	<h1>Tasks taken</h1>
+      	      	<div class="col-sm-3 col-sm-offset-1">
+
+
+<div class="panel panel-green">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+<span class="glyphicon glyphicon-list" aria-hidden="true"></span>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">26</div>
+                                    <div class="small">tasks details!</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left"><a href="\aboutme">View Details</a></span>
+                                <span class="pull-right"><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+
+      	      	</div>
+
+      	 <div class="col-sm-3 col-sm-offset-1">
+
+<div class="panel panel-yellow">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+<span class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">26</div>
+                                    <div class="small">task taken</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left"><a href="\tasktaken">View Details</a></span>
+<span class="pull-right"><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+      	      	</div>
+      	<div class="col-sm-3 col-sm-offset-1">
+
+<div class="panel panel-red">
+                        <div class="panel-heading">
+                            <div class="row">
+                                <div class="col-xs-3">
+<span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>
+                                </div>
+                                <div class="col-xs-9 text-right">
+                                    <div class="huge">26</div>
+                                    <div class="small">delivery</div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="#">
+                            <div class="panel-footer">
+                                <span class="pull-left"><a href="\delivery">View Details</span>
+<span class="pull-right"><span class="glyphicon glyphicon-hand-right" aria-hidden="true"></span></span>
+                                <div class="clearfix"></div>
+                            </div>
+                        </a>
+                    </div>
+      	      	</div>
+      	</div>
+      </div>
+        <div id="chart_div"><div>            
+    </section>    
+    <footer class="text-center">
+    <h3>
+      &copy; 2015 Left Over Swap. All rights reserved.
+    </footer>
+    <script>
+    google.load('visualization', '1', {packages: ['corechart', 'bar']});
+google.setOnLoadCallback(drawColColors);
+
+function drawColColors() {
+      var data = new google.visualization.DataTable();
+      data.addColumn('timeofday', 'Time of Day');
+      data.addColumn('number', 'Motivation Level');
+      data.addColumn('number', 'Energy Level');
+
+      data.addRows([
+        [{v: [8, 0, 0], f: '8 am'}, 1, .25],
+        [{v: [9, 0, 0], f: '9 am'}, 2, .5],
+        [{v: [10, 0, 0], f:'10 am'}, 3, 1],
+        [{v: [11, 0, 0], f: '11 am'}, 4, 2.25],
+        [{v: [12, 0, 0], f: '12 pm'}, 5, 2.25],
+        [{v: [13, 0, 0], f: '1 pm'}, 6, 3],
+        [{v: [14, 0, 0], f: '2 pm'}, 7, 4],
+        [{v: [15, 0, 0], f: '3 pm'}, 8, 5.25],
+        [{v: [16, 0, 0], f: '4 pm'}, 9, 7.5],
+        [{v: [17, 0, 0], f: '5 pm'}, 10, 10],
+      ]);
+
+      var options = {
+        title: 'Motivation and Energy Level Throughout the Day',
+        colors: ['#9575cd', '#33ac71'],
+        hAxis: {
+          title: 'Time of Day',
+          format: 'h:mm a',
+          viewWindow: {
+            min: [7, 30, 0],
+            max: [17, 30, 0]
+          }
+        },
+        vAxis: {
+          title: 'Rating (scale of 1-10)'
+        }
+      };
+
+      var chart = new google.visualization.ColumnChart(document.getElementById('chart_div'));
+      chart.draw(data, options);
+    }
+    </script>
+    
+    
+  </body>
+</html>

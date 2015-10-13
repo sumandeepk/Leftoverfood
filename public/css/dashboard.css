@@ -1,0 +1,77 @@
+.navbar-header{width: 40%;}
+.navbar-header h1{font-weight: 400;margin: 10px 0 0 0;}
+.navbar-brand{padding:0px !important;width:100px}
+.nav{float: right;padding-right: 50px}
+footer{background-color: #222222;color: #fff;width: 100%;position:fixed;bottom:0px}
+.navbar-header img,.item img{width:100%;height: 100% !important;}
+/*body{background: linear-gradient(230deg, #A24BCF, #4B79CF, #4BC5CF) repeat scroll 0% 0% / 300% 300% transparent !important;}*/
+
+/*background: linear-gradient(230deg, #A24BCF, #4B79CF, #4BC5CF)*/
+
+.row{margin-top:30px;color:#ecf0f1 !important}
+.panel-green {
+    border-color: #5cb85c;
+}
+
+.panel-green .panel-heading {
+    border-color: #5cb85c;
+    color: #fff;
+    background-color: #5cb85c;
+}
+
+.panel-green a {
+    color: #5cb85c;
+}
+
+.panel-green a:hover {
+    color: #3d8b3d;
+}
+
+.panel-red {
+    border-color: #d9534f;
+}
+
+.panel-red .panel-heading {
+    border-color: #d9534f;
+    color: #fff;
+    background-color: #d9534f;
+}
+
+.panel-red a {
+    color: #d9534f;
+}
+
+.panel-red a:hover {
+    color: #b52b27;
+}
+
+.panel-yellow {
+    border-color: #f0ad4e;
+}
+
+.panel-yellow .panel-heading {
+    border-color: #f0ad4e;
+    color: #fff;
+    background-color: #f0ad4e;
+}
+
+.panel-yellow a {
+    color: #f0ad4e;
+}
+
+.panel-yellow a:hover {
+    color: #df8a13;
+}
+.panel-heading span{font-size:3.5em}
+.huge {
+    font-size: 40px;
+}
+.small{
+	font-size:2em;
+}
+#chart_div{
+	width:60%;
+	text-align:center;
+	margin:0 auto;
+	height:300px;
+}
